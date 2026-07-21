@@ -1,7 +1,9 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   BookOpen,
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
   FileQuestion,
   GraduationCap,
   RotateCcw,
@@ -12,6 +14,7 @@ import {
 import { examData } from "./data/examData";
 
 type MainTab = "terms" | "written" | "practical";
+type Term = (typeof examData.terms)[number];
 type WrittenQuestion = (typeof examData.written)[number]["questions"][number];
 type PracticalQuestion = (typeof examData.practical)[number]["questions"][number];
 
@@ -48,6 +51,7 @@ function App() {
   const [writtenRound, setWrittenRound] = useState(1);
   const [practicalRound, setPracticalRound] = useState(1);
   const [termQuery, setTermQuery] = useState("");
+  const [selectedTermId, setSelectedTermId] = useState<number>(examData.terms[0].id);
   const [writtenAnswers, setWrittenAnswers] = useState<Record<string, string>>({});
   const [practicalAnswers, setPracticalAnswers] = useState<Record<string, string>>({});
   const [checkedPractical, setCheckedPractical] = useState<Record<string, boolean>>({});
@@ -59,6 +63,15 @@ function App() {
       (term) => normalize(term.title).includes(query) || normalize(term.description).includes(query),
     );
   }, [termQuery]);
+
+  useEffect(() => {
+    if (filteredTerms.length > 0 && !filteredTerms.some((term) => term.id === selectedTermId)) {
+      setSelectedTermId(filteredTerms[0].id);
+    }
+  }, [filteredTerms, selectedTermId]);
+
+  const selectedTerm =
+    filteredTerms.find((term) => term.id === selectedTermId) ?? filteredTerms[0] ?? examData.terms[0];
 
   const selectedWritten = examData.written.find((round) => round.round === writtenRound) ?? examData.written[0];
   const selectedPractical =
@@ -116,7 +129,7 @@ function App() {
             <div className="section-head">
               <div>
                 <p className="eyebrow">108개 핵심용어</p>
-                <h2>개념을 빠르게 훑고 검색하세요</h2>
+                <h2>목록에서 고르고, 한 번에 하나씩 읽으세요</h2>
               </div>
               <label className="search-box">
                 <Search size={18} />
@@ -127,15 +140,11 @@ function App() {
                 />
               </label>
             </div>
-            <div className="term-grid">
-              {filteredTerms.map((term) => (
-                <article className="term-card" key={term.id}>
-                  <div className="term-number">{String(term.id).padStart(3, "0")}</div>
-                  <h3>{term.title}</h3>
-                  <p>{term.description}</p>
-                </article>
-              ))}
-            </div>
+            <TermsReader
+              terms={filteredTerms}
+              selectedTerm={selectedTerm}
+              onSelectTerm={setSelectedTermId}
+            />
           </section>
         )}
 
@@ -206,6 +215,82 @@ function App() {
           </QuestionSection>
         )}
       </main>
+    </div>
+  );
+}
+
+function TermsReader({
+  terms,
+  selectedTerm,
+  onSelectTerm,
+}: {
+  terms: readonly Term[];
+  selectedTerm: Term;
+  onSelectTerm: (id: number) => void;
+}) {
+  const selectedIndex = terms.findIndex((term) => term.id === selectedTerm.id);
+  const hasTerms = terms.length > 0;
+  const paragraphs = selectedTerm.description.split(/\n+/).filter(Boolean);
+
+  const moveSelection = (direction: -1 | 1) => {
+    if (!hasTerms) return;
+    const nextIndex = Math.min(Math.max(selectedIndex + direction, 0), terms.length - 1);
+    onSelectTerm(terms[nextIndex].id);
+  };
+
+  if (!hasTerms) {
+    return (
+      <div className="term-empty">
+        <strong>검색 결과가 없습니다.</strong>
+        <span>다른 용어 또는 설명 키워드로 다시 검색하세요.</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="term-workspace">
+      <aside className="term-index-panel" aria-label="핵심용어 목록">
+        <div className="term-index-summary">
+          <strong>{terms.length}</strong>
+          <span>개 용어</span>
+        </div>
+        <div className="term-index-list">
+          {terms.map((term) => (
+            <button
+              key={term.id}
+              className={term.id === selectedTerm.id ? "term-index-item active" : "term-index-item"}
+              type="button"
+              onClick={() => onSelectTerm(term.id)}
+            >
+              <span>{String(term.id).padStart(3, "0")}</span>
+              <strong>{term.title}</strong>
+            </button>
+          ))}
+        </div>
+      </aside>
+
+      <article className="term-reader" aria-live="polite">
+        <div className="term-reader-kicker">핵심용어 {String(selectedTerm.id).padStart(3, "0")}</div>
+        <h3>{selectedTerm.title}</h3>
+        <div className="term-reader-body">
+          {paragraphs.map((paragraph, index) => (
+            <p key={`${selectedTerm.id}-${index}`}>{paragraph}</p>
+          ))}
+        </div>
+        <div className="term-reader-actions">
+          <button type="button" onClick={() => moveSelection(-1)} disabled={selectedIndex <= 0}>
+            <ChevronLeft size={18} />
+            <span>이전</span>
+          </button>
+          <span>
+            {selectedIndex + 1} / {terms.length}
+          </span>
+          <button type="button" onClick={() => moveSelection(1)} disabled={selectedIndex >= terms.length - 1}>
+            <span>다음</span>
+            <ChevronRight size={18} />
+          </button>
+        </div>
+      </article>
     </div>
   );
 }
