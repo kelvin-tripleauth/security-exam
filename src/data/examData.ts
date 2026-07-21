@@ -3,32 +3,32 @@ export const examData = {
     {
       "id": 1,
       "title": "기밀성(Confidentiality)",
-      "description": "정보의 노출, 탈취로 데이터 해독이 불가능하며 비밀성을 보장한다. 즉, 메시지를 암호화하고 복호화하는 암호화\n알고리즘을 사용하여 기밀성을 보장하고 암호화 알고리즘에는 대칭키 기반 DES, 3DES, AES, SEED, IDEA,\nARIA가 있고 비대칭키 기반은 RSA, ECC, DSA가 존재한다.\n대칭 및 비대칭\n기\n밀\n성\nMessage 암호화 암호문\n송신자 수신자\n암호화"
+      "description": "정보의 노출, 탈취로 데이터 해독이 불가능하며 비밀성을 보장한다. 즉, 메시지를 암호화하고 복호화하는 암호화 알고리즘을 사용하여 기밀성을 보장하고 암호화 알고리즘에는 대칭키 기반 DES, 3DES, AES, SEED, IDEA, ARIA가 있고 비대칭키 기반은 RSA, ECC, DSA가 존재한다."
     },
     {
       "id": 2,
       "title": "무결성(Integrity)",
-      "description": "송신자의 메시지가 위조, 변조되지 않았음을 보장하는 것으로 해시함수를 활용하여 원본의 변조 여부를 파악\n한다.\nOne Way Function\n무\n결\n성\n확\nMessage Hast Function Massage Digest 인\n송신자\nSHA-1, SHA-3"
+      "description": "송신자의 메시지가 위조, 변조되지 않았음을 보장하는 것으로 해시함수를 활용하여 원본의 변조 여부를 파악한다."
     },
     {
       "id": 3,
       "title": "가용성(Availability)",
-      "description": "정당한 사용자(Right User)가 서비스 요청 시에 서비스를 제공하는 특성으로 가용성을 위해서 접근 권한(Ac-\ncess Control), 고가용성(High Availability), 결합허용시스템(FT)이 존재한다.\n서비스 연속성\n실행 Active\nHigh Avilability\nDB\n사용자 인증 Failover\n송신자\nStandby\n권한관리 대기\nDB"
+      "description": "정당한 사용자(Right User)가 서비스 요청 시에 서비스를 제공하는 특성으로 가용성을 위해서 접근 권한(Access Control), 고가용성(High Availability), 결합허용시스템(FT)이 존재한다."
     },
     {
       "id": 4,
       "title": "대칭키(Symmetric Key)",
-      "description": "암호화 키와 복호화 키가 동일한 것으로 송신자와 수신자는 동일한 키를 보유하고 있어야 하기 때문에 키 관리가\n어렵다.\n기밀성 제공\nMessage 암호문 암호문 복호화 Massage\n송신자 수신자\n암호화 키 암호화 키 공유 암호화 키"
+      "description": "암호화 키와 복호화 키가 동일한 것으로 송신자와 수신자는 동일한 키를 보유하고 있어야 하기 때문에 키 관리가 어렵다."
     },
     {
       "id": 5,
       "title": "비대칭키(Public Key)",
-      "description": "암호화 키와 복호화 키가 다른 것으로 키 관리가 편리하지만, 키의 길이가 길다.\n기밀성 제공\nMessage 암호문 암호문 복호화 Massage\n송신자 수신자\n개인 키 암호화 키와 개인 키\n복호화 키가 다름"
+      "description": "암호화 키와 복호화 키가 다른 것으로 키 관리가 편리하지만, 키의 길이가 길다."
     },
     {
       "id": 6,
       "title": "NIST 표준(National Institute of Standards and Technology)",
-      "description": "NIST가 예전에는 국립 표준국이었으며, 측정 표준들을 촉진하고 유지하는 기관이다. 또한 이러한 표준을 개발하\n고 사용하는 산업체와 과학계를 격려하고 지원하기 위한 활성화 프로그램도 가지고 있다.\nIDS T-Senor\nIDS T-Senor\n고객 외부 네트워크 Packet 복제\n오용탐지(침입패턴)\nIDS\n복제 Log 이상탐지(정상패턴)\n고객"
+      "description": "NIST가 예전에는 국립 표준국이었으며, 측정 표준들을 촉진하고 유지하는 기관이다. 또한 이러한 표준을 개발하 고 사용하는 산업체와 과학계를 격려하고 지원하기 위한 활성화 프로그램도 가지고 있다."
     },
     {
       "id": 7,
@@ -38,87 +38,87 @@ export const examData = {
     {
       "id": 8,
       "title": "인증서 발행기관(Certificate Authority)",
-      "description": "인증정책을 수립, 인증서 및 인증서 폐기목록(CRL)을 관리하는 기관이다. 또한, 정책을 수립하고 집행하는\nPCA, PAA 기관이 있다.\nRoot CA\n상위\n전자인증 PAA Policy Approving Authority, 정책승인기관\n인증서 발행기관 PCA Policy Certification Authority, 정책인증기관\n하위 CA Certification Authority, 인증기관"
+      "description": "인증정책을 수립, 인증서 및 인증서 폐기목록(CRL)을 관리하는 기관이다. 또한, 정책을 수립하고 집행하는 PCA, PAA 기관이 있다."
     },
     {
       "id": 9,
       "title": "ACK(Acknowledgment)",
-      "description": "데이터 블록이 오류 없이 목표지점에 도착했다는 것을 나타내기 위해 보내는 일종의 메시지이며, 부정적인 인식\n통보는 “NAK”라고 부른다."
+      "description": "데이터 블록이 오류 없이 목표지점에 도착했다는 것을 나타내기 위해 보내는 일종의 메시지이며, 부정적인 인식 통보는 “NAK”라고 부른다."
     },
     {
       "id": 10,
       "title": "부인 봉쇄(Non-Repudiation)",
-      "description": "송신자의 메시지를 수신자가 받은 후 수신 사실에 대한 부인을 방지하고 전자서명(Digital Signature)에서 사용\n한다.\n공개 키 등록 인증 공개 키 다운받음 부 인\n기관 봉 쇄\nMessage 암호문 Massage\n송신자 수신자\n개인 키로 암호화 공개 키로 복호화"
+      "description": "송신자의 메시지를 수신자가 받은 후 수신 사실에 대한 부인을 방지하고 전자서명(Digital Signature)에서 사용 한다."
     },
     {
       "id": 11,
       "title": "디렉터리 서비스(Directory Service)",
-      "description": "실제 이름과 주소를 네트워크의 실제 위치와 무관하게 논리적 이름과 주소를 연결하는 것으로 ITU-T X.500과\n인터넷에서 사용하는 경량화된 LDAP이 존재한다.\nITU-T 표준\nX.500 입력\n고객 DAP : Directory Sccess Protocol 수정\nDirectory\nIETF 표준\nLDAP Service\n조회\n고객"
+      "description": "실제 이름과 주소를 네트워크의 실제 위치와 무관하게 논리적 이름과 주소를 연결하는 것으로 ITU-T X.500과 인터넷에서 사용하는 경량화된 LDAP이 존재한다."
     },
     {
       "id": 12,
       "title": "OCSP(Online Certificate Status Protocol)",
-      "description": "전자서명 인증서 폐지 목록(CRL)의 갱신 주기 문제를 해결하기 위해서 실시간으로 인증서 유효성을 검증하는 프\n로토콜이다. OCSP는 WPKI에서 인증서 취소 여부 확인 및 인증기관(CA) 간의 상호인증을 위한 프로토콜로도\n활용된다.\nOCSP\nCA : 금융결제원 CA : 증권전산\nCA 간 상호인증\n사용자 정보 X.509 인증서 발급\n타 기관 인증서로 인증요청\n사용자"
+      "description": "전자서명 인증서 폐지 목록(CRL)의 갱신 주기 문제를 해결하기 위해서 실시간으로 인증서 유효성을 검증하는 프 로토콜이다. OCSP는 WPKI에서 인증서 취소 여부 확인 및 인증기관(CA) 간의 상호인증을 위한 프로토콜로도 활용된다."
     },
     {
       "id": 13,
       "title": "X.509 인증서",
-      "description": "주체의 공개키 값, 이름 및 전체 메일주소와 같은 주체의 식별자 정보, 유효기간, 발급자 식별 정보를 포함하는\n인증서이다.\nX.509 인증서\n발급자 서명 인증서 유효기간 주체정보 주체 공개키"
+      "description": "주체의 공개키 값, 이름 및 전체 메일주소와 같은 주체의 식별자 정보, 유효기간, 발급자 식별 정보를 포함하는 인증서이다."
     },
     {
       "id": 14,
       "title": "메시지 다이제스트(Message Digest)",
-      "description": "해시함수를 사용해서 메시지마다 왕복 시간이 산출되도록 만든 간단한 문자열이다. 전자서명에서 문서의 변조\n(무결성 위배) 여부를 확인할 수 있는 일종의 체크섬(Check Sum)이다.\nMessage 일방향 Hash 함수 Massage Digest 송신\n인터넷 사용자 SHA-1, SHA-3\n무결성 확인"
+      "description": "해시함수를 사용해서 메시지마다 왕복 시간이 산출되도록 만든 간단한 문자열이다. 전자서명에서 문서의 변조 (무결성 위배) 여부를 확인할 수 있는 일종의 체크섬(Check Sum)이다."
     },
     {
       "id": 15,
       "title": "해시함수(Hash Function)",
-      "description": "단방향으로 어떤 키에 대한 테이블 주소를 계산하는 방법으로 전자서명에서는 메시지 다이제스트를 생성하고, 문\n서의 변조 여부를 확인하기 위해서 사용된다."
+      "description": "단방향으로 어떤 키에 대한 테이블 주소를 계산하는 방법으로 전자서명에서는 메시지 다이제스트를 생성하고, 문 서의 변조 여부를 확인하기 위해서 사용된다."
     },
     {
       "id": 16,
       "title": "인증(Authentication)",
-      "description": "정보 시스템의 신뢰성을 보장하기 위해서 사용자 ID 및 패스워드를 통하여 정당한 사용자인지를 확인한다. 인증\n은 SSO, RADIUS, DIAMETER, I-PIN 등에서 사용된다.\n템\n스\n시\n식별 ID 증 소유에 의한 인증\n인\n지식에 의한 인증\n사용자 인증 Password 생체에 의한 인증"
+      "description": "정보 시스템의 신뢰성을 보장하기 위해서 사용자 ID 및 패스워드를 통하여 정당한 사용자인지를 확인한다. 인증 은 SSO, RADIUS, DIAMETER, I-PIN 등에서 사용된다."
     },
     {
       "id": 17,
       "title": "허가(Authorization)",
-      "description": "사용자, 프로그램, 프로세스에 허가한 권한을 의미한다. 권한은 임의적 DAC, 강제적 MAC, 롤 기반 RBAC, 다\n단 계층 구조의 MLP로 권한이 구현된다.\n인증 시스템\nAccess\n인증\nControl List\n사용자\n권한(허가)"
+      "description": "사용자, 프로그램, 프로세스에 허가한 권한을 의미한다. 권한은 임의적 DAC, 강제적 MAC, 롤 기반 RBAC, 다 단 계층 구조의 MLP로 권한이 구현된다."
     },
     {
       "id": 18,
       "title": "감사(Audit)",
-      "description": "사용자 정책 및 보안 정책을 수립하고 이에 따라 시스템이 안전하게 운영되고 있는지를 검증하기 위해서 정보 시\n스템을 추적하고 확인하는 행위이다. 정보보안 감사를 할 수 있는 방법은 ITGI COBIT이가 있다.\nLog정보\n감\n사\nUser ID (Audit)\nService 책임추적성\nService ID\n사용자\nIP Address"
+      "description": "사용자 정책 및 보안 정책을 수립하고 이에 따라 시스템이 안전하게 운영되고 있는지를 검증하기 위해서 정보 시스템을 추적하고 확인하는 행위이다. 정보보안 감사를 할 수 있는 방법은 ITGI COBIT이가 있다."
     },
     {
       "id": 19,
       "title": "감사추적(Audit Trail)",
-      "description": "컴퓨터 보안 시스템에서 시스템 자원 사용에 대해 시간 순서에 따라 기록된 활동 내용을 말한다. 사용자 로그인,\n파일 접근, 기타 다양한 활동 내용(Event), 그리고 실질적 또는 시도된 보안 위반 사항이 합법적으로 발생했는지\n또는 허가받지 않고 발생했는지를 포함된다.\nLog정보\n감\n사\nUser ID (Audit)\nService 책임추적성\nService ID\n사용자\nIP Address"
+      "description": "컴퓨터 보안 시스템에서 시스템 자원 사용에 대해 시간 순서에 따라 기록된 활동 내용을 말한다. 사용자 로그인, 파일 접근, 기타 다양한 활동 내용(Event), 그리고 실질적 또는 시도된 보안 위반 사항이 합법적으로 발생했는지 또는 허가받지 않고 발생했는지를 포함된다."
     },
     {
       "id": 20,
       "title": "AAA(Authentication, Authorization, Accounting)",
-      "description": "유무선 통신 및 인터넷 환경에서 가입자에 대한 신뢰성 있는 인증(Authentication), 권한 검증(Authoriza-\ntion), 과금(Accounting) 기능을 제공하는 정보보호 기술로 소규모 네트워크에서 사용하는 RADIUS와 대규모\n네트워크에서 사용하는 DIAMETER AAA Protocol이 존재한다.\n인증(Authentication) WLAN\nRADIUS\nAAA Protocol 권한(Authorization)\nWBro Diameter AAA\n과금(Accounting)"
+      "description": "유무선 통신 및 인터넷 환경에서 가입자에 대한 신뢰성 있는 인증(Authentication), 권한 검증(Authorization), 과금(Accounting) 기능을 제공하는 정보보호 기술로 소규모 네트워크에서 사용하는 RADIUS와 대규모 네트워크에서 사용하는 DIAMETER AAA Protocol이 존재한다."
     },
     {
       "id": 21,
       "title": "접근 제어(Access Control)",
-      "description": "통신 시스템, 데이터 저장장치의 사용을 허가하거나 거부하기 위해서 사용되는 서비스 기법으로 접근 제어 리스\n트(ACL)는 주체(신분) 기반 DAC, 객체기반 MAC, 롤 기반 RBA가 있다.\n주체기반\nAccess Control DAC 소유자 기반\n객체기반\nAccess Control List Role기반 MAC 관리자에 의한 관리\nCapability List\nRBAC Role과 관한 매핑"
+      "description": "통신 시스템, 데이터 저장장치의 사용을 허가하거나 거부하기 위해서 사용되는 서비스 기법으로 접근 제어 리스 트(ACL)는 주체(신분) 기반 DAC, 객체기반 MAC, 롤 기반 RBA가 있다."
     },
     {
       "id": 22,
       "title": "다단계 보안 정책(Multi Level Policy)",
-      "description": "계층형으로 권한을 부여하는 정보보안 정책으로 군대에서 사용하며, 정보의 기밀성을 통제하는 Bell-Lapadula\n모델과 정보의 무결성을 통제하는 Biba 모델이 있다.\nSecurity Label 주체 주체 주체 주체 주체\nAccess Control 기밀\n기밀성 무기성 대외비 소유자 기반\nBell Lapadula Biba\n공개"
+      "description": "계층형으로 권한을 부여하는 정보보안 정책으로 군대에서 사용하며, 정보의 기밀성을 통제하는 Bell-Lapadula 모델과 정보의 무결성을 통제하는 Biba 모델이 있다."
     },
     {
       "id": 23,
       "title": "EAM(Enterprise Access Management)",
-      "description": "기업의 정보 시스템 통합인증(Single Sign-On)과 이를 기반으로 한 통합된 사용자 인증 및 권한관리 시스템을\n구축하기 위한 접근 통제(Access Control) 솔루션이다. EAM의 핵심 기술은 인증(Authenticaion), 권한(Au-\nthorization), 관리(Administration/Audit)이며 EAM 3A 기술이라고 한다.\nEAM\nAgent CRM 시스템\n사용자 통합인증, 접근권한\n외부 네트워크 Agent ERP 시스템\nAgent SCM 시스템\n권한정보 자동 인증,\n사용자 권한부여"
+      "description": "기업의 정보 시스템 통합인증(Single Sign-On)과 이를 기반으로 한 통합된 사용자 인증 및 권한관리 시스템을 구축하기 위한 접근 통제(Access Control) 솔루션이다. EAM의 핵심 기술은 인증(Authenticaion), 권한(Authorization), 관리(Administration/Audit)이며 EAM 3A 기술이라고 한다."
     },
     {
       "id": 24,
       "title": "DRM(Digital Rights Management)",
-      "description": "디지털 콘텐츠의 불법복제 및 유통에 따른 문제를 해결하고 정당한 사용자(Right User)만 디지털 콘텐츠를 사용\n하고, 과금을 통해 저작권자의 권리 및 이익을 보호하는 디지털 콘텐츠 보호 기술이다."
+      "description": "디지털 콘텐츠의 불법복제 및 유통에 따른 문제를 해결하고 정당한 사용자(Right User)만 디지털 콘텐츠를 사용 하고, 과금을 통해 저작권자의 권리 및 이익을 보호하는 디지털 콘텐츠 보호 기술이다."
     },
     {
       "id": 25,
@@ -128,12 +128,12 @@ export const examData = {
     {
       "id": 26,
       "title": "IDEA",
-      "description": "128 Bit의 키로 암호화/복호화를 하는 대칭키 암호 알고리즘으로 유럽에서 많이 사용하고 있다.\nIDEA\n유럽 대칭키 기법 128Bit 이상"
+      "description": "128 Bit의 키로 암호화/복호화를 하는 대칭키 암호알고리즘으로 유럽에서 많이 사용하고 있다."
     },
     {
       "id": 27,
       "title": "보안 커널(Secirity Kernel)",
-      "description": "운영체제에 내재 된 보안상의 결함으로 인하여 발생 가능한 각종 해킹으로부터 보호하기 위해 기존 운영체제 내\n에 보안 기능을 통합시킨 커널로 Secure OS에서 활용된다.\n보\n안\n커\n널\nAPI 제공\n운\n영\n체\n제\n프로세스 관리 Hard\nware\nCPU\n접근 관리 메모리 관리 Memory\n보안 탐지 등 입출력 관리 Disk\n송신자"
+      "description": "운영체제에 내재 된 보안상의 결함으로 인하여 발생 가능한 각종 해킹으로부터 보호하기 위해 기존 운영체제 내 에 보안 기능을 통합시킨 커널로 Secure OS에서 활용된다."
     },
     {
       "id": 28,
@@ -143,202 +143,202 @@ export const examData = {
     {
       "id": 29,
       "title": "오용탐지(Misuse Detection)",
-      "description": "침입패턴을 미리 저장하여 패턴 발생 시에 침입을 탐지하는 IDS 보안 탐지 기술이다.\n침입\nRule Set\n활동 로그 침입패턴\n비교\n침입패턴\n사용자 혹은 침입자\n정상"
+      "description": "침입패턴을 미리 저장하여 패턴 발생 시에 침입을 탐지하는 IDS 보안 탐지 기술이다."
     },
     {
       "id": 30,
       "title": "이상 탐지(Anomaly Detection)",
-      "description": "정상적인 패턴을 저장하고 정상적인 패턴 이외에 다른 패턴 발생 시 침입을 탐지하는 IDS 보안 탐지 기술이다.\n침입\nRule Set\n활동 로그 정상패턴\n비교\n정상패턴\n사용자 혹은 침입자\n정상"
+      "description": "정상적인 패턴을 저장하고 정상적인 패턴 이외에 다른 패턴 발생 시 침입을 탐지하는 IDS 보안 탐지 기술이다."
     },
     {
       "id": 31,
       "title": "스크링 라우터(Screening Router)",
-      "description": "OSI 7계층의 3, 4계층에서 동작하고 TCP, UDP 프로토콜 헤더에 포함된 내용을 분석하여 패킷 트래픽을 허가\n또는 거부하는 패킷 필터링을 수행한다.\nScreening Router\n사용자\n내부\nPacket Filtering 네트워크\n블랙리스트 IP 차단 IOS 3, 4계층에서\n사용자\n수행"
+      "description": "OSI 7계층의 3, 4계층에서 동작하고 TCP, UDP 프로토콜 헤더에 포함된 내용을 분석하여 패킷 트래픽을 허가 또는 거부하는 패킷 필터링을 수행한다."
     },
     {
       "id": 32,
       "title": "버스천 호스트(Bastion Host)",
-      "description": "외부 네트워크와 내부 네트워크를 연결하는 방화벽 시스템으로 방화벽 기능이 구현된 호스트를 사용하여 감사,\n로그, 모니터링 기능을 수행한다.\nBastion Host\n운영 서버\n고객 Packet Filtering\n외부 네트워크 Audit 내부 네트워크 고객\n데이터베이스\nLog 관리\n고객"
+      "description": "외부 네트워크와 내부 네트워크를 연결하는 방화벽 시스템으로 방화벽 기능이 구현된 호스트를 사용하여 감사, 로그, 모니터링 기능을 수행한다."
     },
     {
       "id": 33,
       "title": "듀얼 홈 게이트웨어(Dual Home Gateway)",
-      "description": "두 개의 네트워크 인터페이스를 가진 버스천 호스트로 외부망과 내부망을 연결하는 Proxy 서버 형태이다.\nDual Home Gayway\n운영 서버\n고객\n외부 네트워크 외부 LAN Card 내부 네트워크\n고객\n데이터베이스\n고객 내부 LAN Card"
+      "description": "두 개의 네트워크 인터페이스를 가진 버스천 호스트로 외부망과 내부망을 연결하는 Proxy 서버 형태이다."
     },
     {
       "id": 34,
       "title": "CCRA(Common Criteria Recognition Arrangement)",
-      "description": "정보보호 제품의 안전성을 회원국 간 상호인증하여 활용을 증진시키는 국제협약으로 인증한 정보보호 제품에 대\n한 상호인정 협약국이다.\n인증 비용절감\nCCRA 국가간 CC 상호인증 인증 편의성\n수출용이"
+      "description": "정보보호 제품의 안전성을 회원국 간 상호인증하여 활용을 증진시키는 국제협약으로 인증한 정보보호 제품에 대 한 상호인정 협약국이다."
     },
     {
       "id": 35,
       "title": "TCSEC(Trusted Computer System Evaluation Criteria)",
-      "description": "미국 국립 컴퓨터 보안센터에서 개발 표지 색이 오렌지색이기 때문에 통상 오렌지북이라고 부른다. 컴퓨터 시스\n템 보호를 위하여 개발된 최초의 체계적이고, 논리적인 표준 TCSEC는 최종적으로 CC로 대체되었다.\nS Firewall\nS E 기밀성\nC\nT\n정보보호 제품평가 IDS\n무결성 가용성\nVPN"
+      "description": "미국 국립 컴퓨터 보안센터에서 개발 표지 색이 오렌지색이기 때문에 통상 오렌지북이라고 부른다. 컴퓨터 시스 템 보호를 위하여 개발된 최초의 체계적이고, 논리적인 표준 TCSEC는 최종적으로 CC로 대체되었다."
     },
     {
       "id": 36,
       "title": "ITSEC(Information Technology Security Evaluation Criteria)",
-      "description": "유럽 국가들의 정보보호 제품에 대한 인증으로 기밀성, 무결성, 가용성을 포함하는 포괄적인 인증이다.\nFirewall\nC\nS E 기밀성\nIT\n정보보호 제품평가 IDS\n무결성 가용성\nVPN"
+      "description": "유럽 국가들의 정보보호 제품에 대한 인증으로 기밀성, 무결성, 가용성을 포함하는 포괄적인 인증이다."
     },
     {
       "id": 37,
       "title": "RTO(Recovery Time Objective)",
-      "description": "어떤 서버에 서비스 장애가 발생하면, 장애 복구를 수행하고 서비스가 정상적으로 다시 복구될 때까지 걸리는 다\n운타임이다.\n목표 복구항목\n주요 업무 업무 우선순위 (RPO)\n대응\n방법\n지원 업무 업무 위험요소 목표 복구시간\n(RTO)"
+      "description": "어떤 서버에 서비스 장애가 발생하면, 장애 복구를 수행하고 서비스가 정상적으로 다시 복구될 때까지 걸리는 다 운타임이다."
     },
     {
       "id": 38,
       "title": "RPO(Recovery Point Objective)",
-      "description": "서버 혹은 서비스 장애 발생 시 복구시간(RTO) 보다는 고객이 원하는 시점으로 돌아가는 것이다.\n목표 복구항목\n주요 업무 업무 우선순위 (RPO)\n대응\n방법\n지원 업무 업무 위험요소 목표 복구시간\n(RTO)"
+      "description": "서버 혹은 서비스 장애 발생 시 복구시간(RTO) 보다는 고객이 원하는 시점으로 돌아가는 것이다."
     },
     {
       "id": 39,
       "title": "DRP(Disaster Recovery Planning)",
-      "description": "정보 시스템에 재해 혹은 장애가 발생하는 경우, 빠른 복구를 통하여 업무 영향을 최소화하려는 계획이다.\n내부위협 DRP\n재난 화재 오류 등\nIT 관점\n위협파악 재해복구 목적\n재해 홍수, 지진 등 DDos, 악성코드 재해복구 범위\n외부위협 재해복구 전략"
+      "description": "정보 시스템에 재해 혹은 장애가 발생하는 경우, 빠른 복구를 통하여 업무 영향을 최소화하려는 계획이다."
     },
     {
       "id": 40,
       "title": "BCP(Business Continuity Planning)",
-      "description": "각종 재해, 재난이 발생하더라도 기업의 업무를 중단없이 처리할 수 있는 체계이고, BIA라는 업무 영향도 분석과\nDRS라는 장애 복구 시스템, BCP의 재해관리 프로세스를 수행한다.\nBCP 업무분석 대응계획 수립 모의훈련\nB\nIA\n위협분석 BCP 조직 지속적 관리\nB\nIA\n업무 영향도 분석 인프라 구축"
+      "description": "각종 재해, 재난이 발생하더라도 기업의 업무를 중단없이 처리할 수 있는 체계이고, BIA라는 업무 영향도 분석과 DRS라는 장애 복구 시스템, BCP의 재해관리 프로세스를 수행한다."
     },
     {
       "id": 41,
       "title": "DRS(Disaster Recovery System)",
-      "description": "재해복구 계획의 원활한 수행을 지원하기 위해서 평상시에 확보하여 두는 인적, 물적 자원 및 이들에 대한 지속\n적인 관리 체계를 지원하는 재해복구 시스템이다. 재해복구 시스템은 계정을 실시간으로 백업하여 복구할 수 있\n는 Mirror Site를 가지는 것이 일반적이다.\n복구 속도\nMirror\nSite 운영 서버 백업센터\nMirror\nFiber Channel Hot\n데이터 변경된 데이터 데이터 Warm\n베이스 적재 베이스 Cold\n구축 비용\nDWDM DWDM"
+      "description": "재해복구 계획의 원활한 수행을 지원하기 위해서 평상시에 확보하여 두는 인적, 물적 자원 및 이들에 대한 지속 적인 관리 체계를 지원하는 재해복구 시스템이다. 재해복구 시스템은 계정을 실시간으로 백업하여 복구할 수 있 는 Mirror Site를 가지는 것이 일반적이다."
     },
     {
       "id": 42,
       "title": "PIMS 인증(Personal Information Management System)",
-      "description": "개인정보에 대한 보안 정책, 프로세스, 인프라를 수립하고 개인정보 보호법률을 준수하고 있는지를 인증하는 한\n국인터넷진흥원의 개인정보보호 인증 제도이다.\n개인정보보호에 관한 법률 개인정보 관리과정 •개인정보 정책, 범위, 위험,\n구현, 사후관리\n•법인 및 개인의 모든 공인 •개인정보 정책, 보호조직, 개인정보 분류,\n개인정보 인증 PIMS 인증 개인정보 보호대책 교육, 기술적, 물리적 보호 등\n•온라인 및 오프라인\n모두 보호 개인정보 생명주기 •개인정보 수집과 이용, 제공,\n관리, 파기"
+      "description": "개인정보에 대한 보안 정책, 프로세스, 인프라를 수립하고 개인정보 보호법률을 준수하고 있는지를 인증하는 한 국인터넷진흥원의 개인정보보호 인증 제도이다."
     },
     {
       "id": 43,
       "title": "ISMS 인증(Information Security Management System)",
-      "description": "제도 이후의 목적인 정보자산의 기밀성, 무결성, 가용성을 실현하기 위한 절차와 과정을 체계적으로 수립, 문서\n화하고, 지속적으로 관리 운영하는 정보체계 수립 시스템이다. 정보보호 관리체계 범위를 설정하고 위험분석을\n통하여 정보자산을 보호하고 관리한다.\nPlan Do Check Act\n1.1 정보보호 정책 수립 2.1 정보보호대책 효과 3.1 관리체계 재검토 4.1 교정 및 예방 활동\n1.2 범위 설정 구현 3.2 모니터링 및 개선 4.2 침해사고 대응 활동\n1.3 위험분석 및 평가 2.2 정보보호 교육 및 3.3 지속적 점검 4.3 개선사항 검토 후\n1.4 정보호호 대책 및 훈련 3.4 내부감사 적응\n계획수립 3.5 벤치마킹"
+      "description": "제도 이후의 목적인 정보자산의 기밀성, 무결성, 가용성을 실현하기 위한 절차와 과정을 체계적으로 수립, 문서 화하고, 지속적으로 관리 운영하는 정보체계 수립 시스템이다. 정보보호 관리체계 범위를 설정하고 위험분석을 통하여 정보자산을 보호하고 관리한다."
     },
     {
       "id": 44,
       "title": "IPS(Intrustion Prevention System)",
-      "description": "능동적 정보보안 시스템으로 보안 탐지를 통하여 침해 여부를 분석하고, 침해 발생 시에 세션 절단과 같이 대응\n하는 정보보안 솔루션이다."
+      "description": "능동적 정보보안 시스템으로 보안 탐지를 통하여 침해 여부를 분석하고, 침해 발생 시에 세션 절단과 같이 대응 하는 정보보안 솔루션이다."
     },
     {
       "id": 45,
       "title": "IDS(Intrusion Detection System)",
-      "description": "오용탐지 및 이상 탐지 기법을 통하여 침해 여부를 탐지하는 솔루션이다.\nIDS T-Senor\n운영 서버\n고객\nPacket 복제\n외부 네트워크 IDS 오용탐지(침입패턴)\n복제 Log\n이상탐지(정상패턴)\n고객"
+      "description": "오용탐지 및 이상 탐지 기법을 통하여 침해 여부를 탐지하는 솔루션이다."
     },
     {
       "id": 46,
       "title": "ISO38500",
-      "description": "기업 거버넌스의 일부로 이사회를 포함하는 중역진들이 정보보호에 대한 지시와 통제를 어떻게 수행해야 하는가에\n대한 프로세스로 기술적 이슈, 전략적 이슈, 법적 문제를 포함하는 포괄적인 정보보호 거버넌스 프레임워크이다."
+      "description": "기업 거버넌스의 일부로 이사회를 포함하는 중역진들이 정보보호에 대한 지시와 통제를 어떻게 수행해야 하는가에 대한 프로세스로 기술적 이슈, 전략적 이슈, 법적 문제를 포함하는 포괄적인 정보보호 거버넌스 프레임워크이다."
     },
     {
       "id": 47,
       "title": "ISO 27000",
-      "description": "정보보호 관리 시스템 국제 표준으로 ISMS 요구사항, 위험관리, ISMS 측정 매트릭스, ISMS 구현 가이드라인,\n재해복구 서비스를 포함하고 있다.\nISMS 수립 원칙 및 용어 IOS 27001 IOS 27004 ISMS 측정, 규격 정의\nISMS 구현의 공통 실무지침 IOS 27002 IOS 27000 IOS 27005 위험관리\n자산정의, 정책실현, 구현 권고, IOS 27003 IOS 27006 인증기관 및 심사원 자격요건\n개선사항의 규격"
+      "description": "정보보호 관리 시스템 국제 표준으로 ISMS 요구사항, 위험관리, ISMS 측정 매트릭스, ISMS 구현 가이드라인, 재해복구 서비스를 포함하고 있다."
     },
     {
       "id": 48,
       "title": "전자상거래 보안 프로토콜(Electronic Security Protocol)",
-      "description": "B2C, B2B 상에서 안정한 기밀성, 무결성, 가용성을 보장하기 위해서 인증 및 지불 처리를 수행하는 보안 프로토\n콜이다. 보안 프로토콜의 종류에는 기밀성과 무결성을 제공하는 IPSEC와 SSL, 지불 처리를 수행하는 SET가 있\n으며 웹 브라우저에서 인증기관, 암호화 방법을 선택하여 수행하는 S-HTTP가 있다.\n정부 : Goverment 보안 요구사항 보안 프로토콜\nG2B G2C 기밀성 IPSEC, SSL\n전자상거래\n무결성 SET\n기업 : Business 가용성\n가용성 S/MME, PGP, PEM\nB2C"
+      "description": "B2C, B2B 상에서 안정한 기밀성, 무결성, 가용성을 보장하기 위해서 인증 및 지불 처리를 수행하는 보안 프로토콜이다. 보안 프로토콜의 종류에는 기밀성과 무결성을 제공하는 IPSEC와 SSL, 지불 처리를 수행하는 SET가 있으며 웹 브라우저에서 인증기관, 암호화 방법을 선택하여 수행하는 S-HTTP가 있다."
     },
     {
       "id": 49,
       "title": "이중 서명(Dual Signature)",
-      "description": "신용카드 보안 프로토콜 SET에서 구매자와 상점 정보를 별도로 서명하여 처리하는 이중 서명이다.\n서명\n카드 사용자 금융\n이중서명 Payment Gateway\n기관\n지불처리\n서명\n카드 가맹점"
+      "description": "신용카드 보안 프로토콜 SET에서 구매자와 상점 정보를 별도로 서명하여 처리하는 이중 서명이다."
     },
     {
       "id": 50,
       "title": "커버로스(Kerberose)",
-      "description": "MIT에서 개발한 인증 서비스로 티켓 서버에게 티켓을 발급받아 인증을 수행하는 서비스이다.\nAS TGS 은행업무\n(Authentication) (Ticket Granting Service)\n2 ERP\n세션 키가 포함된\n1 사용자 인증 및\nTicket 발급 새로운 Ticket 을 CRM\n사용자 생성 3 서비스 수행"
+      "description": "MIT에서 개발한 인증 서비스로 티켓 서버에게 티켓을 발급받아 인증을 수행하는 서비스이다."
     },
     {
       "id": 51,
       "title": "AES(Advanced Encryption Standard)",
-      "description": "DES의 보안성에 문제점이 제기되어 이를 보완하고자 미국의 표준기술연구소(NIST)에서 차세대 암호표준으로\n선정한 대칭형 암호알고리즘이다. DES가 56bit의 키 길이를 제공하는 반면 AES는 암호시스템의 안전도를 표현\n하는 128bit, 192bit, 256bit 등 3가지 형태의 키 길이를 제공한다.\nAES\n미국 NIST 표준 대칭키 기법 128Bit 이상"
+      "description": "DES의 보안성에 문제점이 제기되어 이를 보완하고자 미국의 표준기술연구소(NIST)에서 차세대 암호표준으로 선정한 대칭형 암호알고리즘이다. DES가 56bit의 키 길이를 제공하는 반면 AES는 암호시스템의 안전도를 표현 하는 128bit, 192bit, 256bit 등 3가지 형태의 키 길이를 제공한다."
     },
     {
       "id": 52,
       "title": "DES(Data Encryption Standard)",
-      "description": "1972년 세계적인 표준으로 사용된 64Bit 블록 암호 알고리즘이다. 2개의 키를 사용하는 3중 DES(Triple DES,\n키 길이 112Bit)가 등장하여 현재까지 사용되고 있다.\n원문 DES 암호화 이중서명\n송신자 암호화 키와 복호화 키가 동일 수신자\n64Bit 블록단위로 암호화"
+      "description": "1972년 세계적인 표준으로 사용된 64Bit 블록 암호알고리즘이다. 2개의 키를 사용하는 3중 DES(Triple DES, 키 길이 112Bit)가 등장하여 현재까지 사용되고 있다."
     },
     {
       "id": 53,
       "title": "CC(Common 제공자 등)",
-      "description": "현존하는 다양한 정보보호 제품의 평가 기준으로 조화와 표준을 제시하고 각 나라의 평가 결과를 상호인증(Mu-\ntual Recognition)하기 위한 표준이다. 단일화된 공통 평가 기준을 제정하여 적용함으로써 평가 결과 및 시간\n절약, 평가 비용의 절감에 따른 제품 가격의 인하, 신속한 평가에 따른 새로운 제품 개발의 가속화 등을 이룰 수\n있다.\nCC 인증\n정보보안제품 정보보안 평가요소 보안 평가 국제인증 상호\n인증\n방화벽, 침입탐지,\n침입대응 시스템 등"
+      "description": "현존하는 다양한 정보보호 제품의 평가 기준으로 조화와 표준을 제시하고 각 나라의 평가 결과를 상호인증(Mutual Recognition)하기 위한 표준이다. 단일화된 공통 평가 기준을 제정하여 적용함으로써 평가 결과 및 시간 절약, 평가 비용의 절감에 따른 제품 가격의 인하, 신속한 평가에 따른 새로운 제품 개발의 가속화 등을 이룰 수 있다."
     },
     {
       "id": 54,
       "title": "CERT(Computer Emergency Response Team)",
-      "description": "CERT는 인터넷 파괴 프로그램의 일종인 worm으로부터의 급습 사고가 발생한 후 만들어졌으나 CERT는 보안\n상의 허점과 부정 이용 사고들에 초점을 맞추어 경보와 사고처리 및 예방을 위한 정책 수립 등을 수행한다."
+      "description": "CERT는 인터넷 파괴 프로그램의 일종인 worm으로부터의 급습 사고가 발생한 후 만들어졌으나 CERT는 보안 상의 허점과 부정 이용 사고들에 초점을 맞추어 경보와 사고처리 및 예방을 위한 정책 수립 등을 수행한다."
     },
     {
       "id": 55,
       "title": "전자서명(Digital Signature)",
-      "description": "전자 서명이란 메시지의 기밀성과 무결성 및 부인방지를 보증하기 위한 과정으로, 일반적으로 전자 상거래 보안\n을 위해 사용된다. 전자 인증서와 유사한 전자 서명은 발신자의 신원을 확인하기 위해 전자 메시지에 첨부되는\n코드이다.\n송신자 Message Digest 메시지, 서명 수신자\n메시지 서명 송신자 메시지 MD\n개인키 무결성\n확인(비교)\nHash 메시지, 서명 Hash MD"
+      "description": "전자 서명이란 메시지의 기밀성과 무결성 및 부인방지를 보증하기 위한 과정으로, 일반적으로 전자 상거래 보안 을 위해 사용된다. 전자 인증서와 유사한 전자 서명은 발신자의 신원을 확인하기 위해 전자 메시지에 첨부되는 코드이다."
     },
     {
       "id": 56,
       "title": "전자인증서(Digital Certificate)",
-      "description": "전자인증서는 사용자가 암호화된 메시지를 전송할 수 있도록 허용한다. 전자인증서는 전자 메시지에 첨부되어,\n사용자가 원하는 대상임을 확인하고 보안 전자 비즈니스 거래를 보증하기 위해 사용된다."
+      "description": "전자인증서는 사용자가 암호화된 메시지를 전송할 수 있도록 허용한다. 전자인증서는 전자 메시지에 첨부되어, 사용자가 원하는 대상임을 확인하고 보안 전자 비즈니스 거래를 보증하기 위해 사용된다."
     },
     {
       "id": 57,
       "title": "적극적 공격(Active Attack)",
-      "description": "파일의 조작 또는 허가받지 않은 파일의 추가 등과 같이 허가받지 않은 상태 변경을 초래하는 네트워크 공격을\n말한다. 수동적 공격은 상태를 변경하지는 않지만 활동 또는 로그 정보를 감시한다.\n변조 Injection\n사용자 피해발생 DDos\n침입자\n금융사기 Voice Phishing"
+      "description": "파일의 조작 또는 허가받지 않은 파일의 추가 등과 같이 허가받지 않은 상태 변경을 초래하는 네트워크 공격을 말한다. 수동적 공격은 상태를 변경하지는 않지만 활동 또는 로그 정보를 감시한다."
     },
     {
       "id": 58,
       "title": "사전공격(Dictionary Attack)",
-      "description": "공격자가 암호 등을 알아맞히기 위해 대규모의 가능한 조합을 사용하는 공격 형태로서, 공격자는 일반적으로 사\n용되는 백만 개 이상의 암호를 선택하여 이들 중 암호가 결정될 때까지 이를 시험해볼 수 있다.\n사전으로 문자열 조합\nLogin\n사전\nID\n문자생성기\n조합 가능한 문자생성기 실행\nPassword 모든 문자"
+      "description": "공격자가 암호 등을 알아맞히기 위해 대규모의 가능한 조합을 사용하는 공격 형태로서, 공격자는 일반적으로 사 용되는 백만 개 이상의 암호를 선택하여 이들 중 암호가 결정될 때까지 이를 시험해볼 수 있다."
     },
     {
       "id": 59,
       "title": "DNS Spoofing",
-      "description": "희생 대상 시스템의 이름 서비스 캐시를 손상하거나 유효한 도메인에 대한 도메인 네임 서버를 손상하여 다른 시\n스템의 DNS 이름을 가장하는 행위이다.\nDNS\nSpoofing\n1 DD\nD\no\nN\ns공\nS(D\n격\nS\no\ne\nm\nrv\na\nic\nin\ne )\nName\n2 기동\n사용자\n공격자 Injection\n3 IP주소 전송"
+      "description": "희생 대상 시스템의 이름 서비스 캐시를 손상하거나 유효한 도메인에 대한 도메인 네임 서버를 손상하여 다른 시스템의 DNS 이름을 가장하는 행위이다."
     },
     {
       "id": 60,
       "title": "트로이 목마(Trojan Horse)",
-      "description": "컴퓨터 시스템에서 정상적인 기능을 하는 프로그램으로 가장해 다른 프로그램 안에 숨어 있다가 그 프로그램이\n실행될 때 자신을 활성화하는 악성 프로그램이다. 컴퓨터 바이러스와 달리 자기 복사 능력이 없지만, 자기 자신\n이 실행되는 순간 시스템에 직접적인 피해를 가하는 특징을 가지고 있다."
+      "description": "컴퓨터 시스템에서 정상적인 기능을 하는 프로그램으로 가장해 다른 프로그램 안에 숨어 있다가 그 프로그램이 실행될 때 자신을 활성화하는 악성 프로그램이다. 컴퓨터 바이러스와 달리 자기 복사 능력이 없지만, 자기 자신 이 실행되는 순간 시스템에 직접적인 피해를 가하는 특징을 가지고 있다."
     },
     {
       "id": 61,
       "title": "Packet Sniffing",
-      "description": "tcpdump, snoop, sniff 등과 같은 네트워크 모니터링 툴을 이용해 네트워크 내에 돌아다니는 패킷의 내용을 분\n석해 정보를 알아내는 것이다. 네트워크에 연동된 호스트뿐만 아니라 외부에서 내부 네트워크로 접속하는 모든\n호스트가 그 대상이 된다.\nMessage\nMessage"
+      "description": "tcpdump, snoop, sniff 등과 같은 네트워크 모니터링 툴을 이용해 네트워크 내에 돌아다니는 패킷의 내용을 분 석해 정보를 알아내는 것이다. 네트워크에 연동된 호스트뿐만 아니라 외부에서 내부 네트워크로 접속하는 모든 호스트가 그 대상이 된다."
     },
     {
       "id": 62,
       "title": "IP Spoofing",
-      "description": "인터넷 프로토콜인 TCP/IP의 구조적 결함, 즉 TCP 시퀀스 번호, 소스 라우터의 소스 주소를 이용한 인증 메커\n니즘 등을 이용한 방법으로 인증 기능을 가지고 있는 시스템을 침입하기 위해 해당 시스템 호스트로 위장하는 방\n법이다.\nClient 3 절단 Server\n1 Sniffer\nTCP Sequence\n획득 2 인증을 우회해서 연결\n침입자"
+      "description": "인터넷 프로토콜인 TCP/IP의 구조적 결함, 즉 TCP 시퀀스 번호, 소스 라우터의 소스 주소를 이용한 인증 메커니즘 등을 이용한 방법으로 인증 기능을 가지고 있는 시스템을 침입하기 위해 해당 시스템 호스트로 위장하는 방법이다."
     },
     {
       "id": 63,
       "title": "Trap Door",
-      "description": "운영체제나 대형 응용 프로그램을 개발하면서 전체적인 시범을 할 때 발견되는 오류에 대한 정비나 유지보수를\n핑계 삼아 컴퓨터 내부의 자료를 뽑아가는 수법이다."
+      "description": "운영체제나 대형 응용 프로그램을 개발하면서 전체적인 시범을 할 때 발견되는 오류에 대한 정비나 유지보수를 핑계 삼아 컴퓨터 내부의 자료를 뽑아가는 수법이다."
     },
     {
       "id": 64,
       "title": "DDoS(Distributed Denial of Service)",
-      "description": "분산된 해킹 프로그램으로 서비스를 요청하여 자원을 고갈하는 방식으로 서비스 거부를 유발하는 공격 기법이다.\nDDoS는 애플리케이션, 서버, DBMS, 네트워크 인프라 등 모든 것을 공격 대상으로 한다.\nService Call 운영시스템\n침입자 자원고갈 서버\nService\n데이터베이스\nService Call 네트워크\n침입자"
+      "description": "분산된 해킹 프로그램으로 서비스를 요청하여 자원을 고갈하는 방식으로 서비스 거부를 유발하는 공격 기법이다. DDoS는 애플리케이션, 서버, DBMS, 네트워크 인프라 등 모든 것을 공격 대상으로 한다."
     },
     {
       "id": 65,
       "title": "Asynchronous Attacks",
-      "description": "컴퓨터 중앙처리장치 속도와 입·출력 장치 속도가 다른 점을 이용해 멀티프로그래밍을 할 때 체크포인트를 써서\n자료를 입수하는 방법이다. 사용하기 쉬우면서도 효과적인 해킹 방법이다. 미리 작성해둔 침투 프로그램으로 시\n스템 운영자를 속인 채 해킹한다."
+      "description": "컴퓨터 중앙처리장치 속도와 입·출력 장치 속도가 다른 점을 이용해 멀티프로그래밍을 할 때 체크포인트를 써서 자료를 입수하는 방법이다. 사용하기 쉬우면서도 효과적인 해킹 방법이다. 미리 작성해둔 침투 프로그램으로 시스템 운영자를 속인 채 해킹한다."
     },
     {
       "id": 66,
       "title": "옵트 인(Opt in)",
-      "description": "확실하게 참여에 동의하는 것으로 주로 마케팅 프로그램 등에서 사용되는 방식이다. 원래 목적 이외의 용도로 개\n인 정보를 사용하는 등의 행동이 사용자의 명백한 동의가 있기 전에는 이루어질 수 없다는 내용이다.\n1 개인정보 활용\n개인정보 활용 동의\n동의\n마케팅 회사\n사용자\n2 마케팅 eMail 발송\n메일발송"
+      "description": "확실하게 참여에 동의하는 것으로 주로 마케팅 프로그램 등에서 사용되는 방식이다. 원래 목적 이외의 용도로 개 인 정보를 사용하는 등의 행동이 사용자의 명백한 동의가 있기 전에는 이루어질 수 없다는 내용이다."
     },
     {
       "id": 67,
       "title": "옵트 아웃(Opt out)",
-      "description": "명확하게 참여를 거부하는 것으로, 주로 마케팅 프로그램 등에서 사용되는 방식이다. 원래 목적 이외의 용도로\n개인 정보를 사용하는 등의 행동이 사용자가 거부하기 전까지는 이루어질 수 있다는 내용이다.\n1 개인정보 활용\n개인정보 활용 동의\n거부\n마케팅 회사\n사용자\n2 마케팅 eMail 발송\n메일발송"
+      "description": "명확하게 참여를 거부하는 것으로, 주로 마케팅 프로그램 등에서 사용되는 방식이다. 원래 목적 이외의 용도로 개인 정보를 사용하는 등의 행동이 사용자가 거부하기 전까지는 이루어질 수 있다는 내용이다."
     },
     {
       "id": 68,
       "title": "무작위(무차별) 공격(Brute Force Attack)",
-      "description": "정확한 키를 찾을 때까지 각각의 가능한 키를 입력하여 시도하는 공격 유형으로 키스페이스에 있는 키의 절반만\n시도하면 성공할 확률이 높다.\n사전으로 문자열 조합\nLogin 사전\nID\n문자생성기\n조합 가능한 문자생성기 실행\nPassword 모든 문자\n침입자\n추론"
+      "description": "정확한 키를 찾을 때까지 각각의 가능한 키를 입력하여 시도하는 공격 유형으로 키스페이스에 있는 키의 절반만 시도하면 성공할 확률이 높다."
     },
     {
       "id": 69,
@@ -348,17 +348,17 @@ export const examData = {
     {
       "id": 70,
       "title": "백도어(Back Door)",
-      "description": "트랩도어(Trap Door)라고도 불리는 백도어는 원래 시스템 관리자나 개발자가 유사시 트러블슈팅이나 유지보수\n등을 할 관리적 목적으로 필요에 의해 시스템에 고의로 남겨 둔 보안 허점의 일종이다.\n관\nPassword Backdoor 리\n자\nBackdoor 가\n만\nLogin Backdoor 들\n어\n둔\n시스템 관리자 뒷\nNetwork Backdoor 문"
+      "description": "트랩도어(Trap Door)라고도 불리는 백도어는 원래 시스템 관리자나 개발자가 유사시 트러블슈팅이나 유지보수 등을 할 관리적 목적으로 필요에 의해 시스템에 고의로 남겨 둔 보안 허점의 일종이다."
     },
     {
       "id": 71,
       "title": "백오리피스(Back Orifice)",
-      "description": "원격지에 있는 타인의 PC에 저장된 파일에 대한 접근은 물론이고 파일의 삭제, 생성, 실행 등 PC 이용자 모르게\n프로그램 및 파일을 조작하는 트로이목마 프로그램이다.\n스\n피\n리 위협파악\n오\n백\n사용자 PC\n사용자 프로그램 Office 문서 기타 컨텐츠"
+      "description": "원격지에 있는 타인의 PC에 저장된 파일에 대한 접근은 물론이고 파일의 삭제, 생성, 실행 등 PC 이용자 모르게 프로그램 및 파일을 조작하는 트로이목마 프로그램이다."
     },
     {
       "id": 72,
       "title": "UTM(United Treat Management)",
-      "description": "다양한 보안 솔루션(Firewall, IDS, IPS, VPN 등) 기능을 하나로 통합하여 보안 문제를 쉽고, 편리하게 관리 및\n해결하는 통합보안 관리 시스템이다.\n통\n합\nIPS 보 안\nDDoS 대응\nUTM\nFirewall 운영시스템\n터널링 침입탐지\n침입자 패킷 필터링\nVPN IDS"
+      "description": "다양한 보안 솔루션(Firewall, IDS, IPS, VPN 등) 기능을 하나로 통합하여 보안 문제를 쉽고, 편리하게 관리 및 해결하는 통합보안 관리 시스템이다."
     },
     {
       "id": 73,
@@ -368,172 +368,172 @@ export const examData = {
     {
       "id": 74,
       "title": "평판 기반 보안 탐지(Reputation Base)",
-      "description": "처음 보거나 잘 알려지지 않은 파일 및 애플리케이션이 등장할 때, 신뢰성 여부를 많은 수의 사용자를 통하여 평\n판으로 확인하는 탐지 방법이다.\n사용자 피해발생 평판분석\n1 애플리케이션 정보 2 평판분석 수행\n파일해시\n4 정보공유 3 분석결과 전송 좋은파일, 나쁜파일\n평판정보\n사용자\n신뢰도, 연관도"
+      "description": "처음 보거나 잘 알려지지 않은 파일 및 애플리케이션이 등장할 때, 신뢰성 여부를 많은 수의 사용자를 통하여 평 판으로 확인하는 탐지 방법이다."
     },
     {
       "id": 75,
       "title": "P3P(Privacy Preferences Platform)",
-      "description": "W3C에서 개발한 개인정보보호 표준 기술 플랫폼으로 웹 사이트에서 이루어지는 데이터 처리에 관한 표준을 제\n시하고 사용자에게 개인정보를 관리할 수 있는 권한을 부여한다.\n웹 브라우저 웹 서버\n개인정보\nClient P3P XML Server P3P XML\n정책비교\n사용자 개인정보 정책파일 포털기업 개인정보 정책파일"
+      "description": "W3C에서 개발한 개인정보보호 표준 기술 플랫폼으로 웹 사이트에서 이루어지는 데이터 처리에 관한 표준을 제 시하고 사용자에게 개인정보를 관리할 수 있는 권한을 부여한다."
     },
     {
       "id": 76,
       "title": "HTTP Pipeline 공격",
-      "description": "HTTP 파이프라인은 다수의 HTTP Request를 하나의 Socket에 전송하여 웹 서버를 호출하는 DDoS 공격 기\n법이다.\nHTTP Request CGI PCB\nWeb Server CGI PCB\n고객 CGI PCB\nCGL Process 생성 CGI PCB\nProcess Fork Memory Allocation\n고객 HTTP Request"
+      "description": "HTTP 파이프라인은 다수의 HTTP Request를 하나의 Socket에 전송하여 웹 서버를 호출하는 DDoS 공격 기 법이다."
     },
     {
       "id": 77,
       "title": "Permanent DOS",
-      "description": "네트워크를 기반으로 하는 펌웨어(Firmware)를 원격 업데이트할 때, 그 안에 악성코드를 삽입하여 시스템을 다\n운시키는 서비스 거부 공격이다."
+      "description": "네트워크를 기반으로 하는 펌웨어(Firmware)를 원격 업데이트할 때, 그 안에 악성코드를 삽입하여 시스템을 다 운시키는 서비스 거부 공격이다."
     },
     {
       "id": 78,
       "title": "SET(Secure Electronic Transaction)",
-      "description": "1996년 VISA와 Master Card 사가 주축이 되어 각 관련 업체 지원 아래 개발된 신용카드 지불 프로토콜이다.\nSET은 구매자와 상점 정보를 별도로 서명하는 이중 서명을 가지는 특징이 있다."
+      "description": "1996년 VISA와 Master Card 사가 주축이 되어 각 관련 업체 지원 아래 개발된 신용카드 지불 프로토콜이다. SET은 구매자와 상점 정보를 별도로 서명하는 이중 서명을 가지는 특징이 있다."
     },
     {
       "id": 79,
       "title": "IPSEC(IP Security)",
-      "description": "안전한 통신을 위한 IP 계층 기반으로 개방형 전자상거래 보안 프로토콜이다.\n인증(AH : Authentication Header)\nC\nTunneling\nIPSE New IPSEC Header IP Header Data\n기밀성(Encapsulation Security Protocol)"
+      "description": "안전한 통신을 위한 IP 계층 기반으로 개방형 전자상거래 보안 프로토콜이다."
     },
     {
       "id": 80,
       "title": "SSL(Secure Socket Layer)",
-      "description": "특정 Web Application을 위한 보안 프로토콜이 아닌 일반적인 인터넷 환경에서 웹 브라우저와 웹 서버 사이에\n서 연결 형식으로 동작하는 전자상거래 보안 프로토콜이다.\nClient Hello\n저\n웹\n브\n라\n우\nServer Hello, 서버 인증서, 서버 공개키 전송\n웹\n서버\nClient 인증서 전송\nChange Cipher Spec\nChange Cipher Spec"
+      "description": "특정 Web Application을 위한 보안 프로토콜이 아닌 일반적인 인터넷 환경에서 웹 브라우저와 웹 서버 사이에서 연결 형식으로 동작하는 전자상거래 보안 프로토콜이다."
     },
     {
       "id": 81,
       "title": "I-PIN",
-      "description": "주민등록번호를 대처하기 위한 인터넷 고유 식별자이다.\n사용자 정보\nI-Pin 발급센터 #1 상호인증 GPKI\nI-Pin 발급\n사용자\nI-Pin 2.0 공인인증과 관계\n인증요청\nI-Pin 발급센터 #N 상호인증 NPKI"
+      "description": "주민등록번호를 대처하기 위한 인터넷 고유 식별자이다."
     },
     {
       "id": 82,
       "title": "TCP Sync Flooding",
-      "description": "많은 수의 Half-Open TCP 연결을 시도하여 상대 호스트의 Listen Queue를 가득 채워서 Buffer Overflow\n를 발생시키는 DDoS 공격 기법이다.\nDDoS 공격 TCP Client TCP 3-Way Handshaking TCP Server\nTCP Client\nSync 대기\nSync+ACK 대기 큐 할당 큐\nSync\nBuffer\n사용자\nOverflow"
+      "description": "많은 수의 Half-Open TCP 연결을 시도하여 상대 호스트의 Listen Queue를 가득 채워서 Buffer Overflow 를 발생시키는 DDoS 공격 기법이다."
     },
     {
       "id": 83,
       "title": "ICMP Flooding(Smurfing)",
-      "description": "ICMP 프로토콜과 IP Broadcast 주소를 이용한 공격 기법으로 Broadcast로 Echo Request를 보내 다량의\nEcho Reply를 임의의 주소로 집중적으로 전송하는 원리이다.\n3 ECO Replay\n침입 컴퓨터 Server\n1\n침입자 Ping X.X.X.255 2 ICMP Brodocast\nClient Client Client Client"
+      "description": "ICMP 프로토콜과 IP Broadcast 주소를 이용한 공격 기법으로 Broadcast로 Echo Request를 보내 다량의 Echo Reply를 임의의 주소로 집중적으로 전송하는 원리이다."
     },
     {
       "id": 84,
       "title": "방화벽(Firewall)",
-      "description": "외부로부터 내부망을 보호하기 위한 네트워크 구성요소로써 허가된 트래픽만 통과하도록 설계된 하드웨어 및 소\n프트웨어를 총칭한다.\nDMZ #1 DMZ #2\n1차 방화벽 Web Server 2차 방화벽 운영시스템\n•패킷 필터링 접근 제어\n침입자\n•블랙리스트 차단"
+      "description": "외부로부터 내부망을 보호하기 위한 네트워크 구성요소로써 허가된 트래픽만 통과하도록 설계된 하드웨어 및 소 프트웨어를 총칭한다."
     },
     {
       "id": 85,
       "title": "부 채널 공격(Side-Channel Attacks)",
-      "description": "암호 모듈 내의 암호 알고리즘이 동작할 때 발생하는 전기 소모량, 전자기 신호량, 열 등의 정보를 수집, 분석해\n암호키를 찾아내는 스마트카드 해킹기법이다.\n격 무선 통신\n공\n널\n채 스마트카드 Reader\n부\n무선 주파수 수신\n침입자"
+      "description": "암호 모듈 내의 암호알고리즘이 동작할 때 발생하는 전기 소모량, 전자기 신호량, 열 등의 정보를 수집, 분석해 암호키를 찾아내는 스마트카드 해킹기법이다."
     },
     {
       "id": 86,
       "title": "PKI(Public Key Infrastructure)",
-      "description": "인증기관에 인증서를 발급받아 네트워크상에서 안전한 비밀통신을 가능하게 하는 인증서 관리 기반구조이다.\n1 인증서 발급신청 2 발급의뢰 Directory Service\n등록기관\n(RA) 3 발급\n사용자 4 X.509 인증서 발급 인증기관 X.509 인증서,\n(CA)\n인증서 취소목록\n사용자\n신원 확인 대행"
+      "description": "인증기관에 인증서를 발급받아 네트워크상에서 안전한 비밀통신을 가능하게 하는 인증서 관리 기반구조이다."
     },
     {
       "id": 87,
       "title": "PMI(Privilege Management Infrastructure)",
-      "description": "사용자 권한, 지원, 임무 등에 관한 사용자 속성(Attribute)을 정의하고 관리하기 위한 권한 인증 체계이다.\n속성 인증서 SOA(Source of Authority)\n인증기관 역할\n인증정보\n권한 검증자\n권한정보\n권한 소유 확인"
+      "description": "사용자 권한, 지원, 임무 등에 관한 사용자 속성(Attribute)을 정의하고 관리하기 위한 권한 인증 체계이다."
     },
     {
       "id": 88,
       "title": "SSO(Single Sign On)",
-      "description": "사용자가 한 번의 인증 과정을 통하여 여러 응용 시스템에 접근할 수 있는 통합인증 보안 솔루션이다.\nSSO\nAgent CRM 시스템\n사용자 통합인증\n외부 네트워크 Agent ERP 시스템\n사용자 ID Agent SCM 시스템\n자동 인증,\n사용자 Password 권한부여"
+      "description": "사용자가 한 번의 인증 과정을 통하여 여러 응용 시스템에 접근할 수 있는 통합인증 보안 솔루션이다."
     },
     {
       "id": 89,
       "title": "ESM(Enterprise Security Management)",
-      "description": "조직의 다종, 다수의 보안 장비를 통합하여 일관된 방식으로 운영, 관리하는 중앙집중적 보안 통제 시스템이다.\n탐지정보 공유\n제\n관\nFirewall ESM Agent IDS 안\n보 트래픽 모니터링\nNMS ESM Agent ESM Manager\n분/일/월별 히스토리\nServer 등 ESM Agent\n상관분석, Alarm\n관리자"
+      "description": "조직의 다종, 다수의 보안 장비를 통합하여 일관된 방식으로 운영, 관리하는 중앙집중적 보안 통제 시스템이다."
     },
     {
       "id": 90,
       "title": "생체인식(Biometrics)",
-      "description": "개인의 고유한 생체정보를 스캔 및 정량화하여, 인증이 필요한 분야에 적용하는 기술로 보편성, 영구성, 유일성,\n획득성의 특성을 가진다.\n복잡도\n생체인식 조건\nDNA\n보편성 영구성 홍채\n정맥\n획득성 유일성\n지문\n안정성"
+      "description": "개인의 고유한 생체정보를 스캔 및 정량화하여, 인증이 필요한 분야에 적용하는 기술로 보편성, 영구성, 유일성, 획득성의 특성을 가진다."
     },
     {
       "id": 91,
       "title": "E-Mail 보안",
-      "description": "수신자의 의사와 관계없이 보내지는 스팸 메일의 방지와 기밀성, 무결성을 보장하는 방안으로 PGP, PEM, S/\nMIME 기법이 있다.\nME\nMI 보안 요구사항 eMail 보안 기법\nMIAL MIME Type\nE\n기밀성 S/MIME\n송신자\n수신자 Message 종류\n무결성 PGP\n메일 내용\n서명 PEM"
+      "description": "수신자의 의사와 관계없이 보내지는 스팸 메일의 방지와 기밀성, 무결성을 보장하는 방안으로 PGP, PEM, S/MIME 기법이 있다."
     },
     {
       "id": 92,
       "title": "WPKI(Wireless Public Key Infrastructure)",
-      "description": "유선 공인인증체계 환경에서 적용된 정책을 무선 환경에서 구현하는 무선 공인인증 구조이다.\n단말 성능 제약\nECC 암호화 •보안성과 성능이 우수한 이산대수 기반의 대칭키 알고리즘\nWPKI Short Live 인증서 •인증서의 유효기간을 1~2일로 하여 인증서를 발급\nOCSP •인증기관 간의 상호인증 프로토콜 사용\n네트워크 제약"
+      "description": "유선 공인인증체계 환경에서 적용된 정책을 무선 환경에서 구현하는 무선 공인인증 구조이다."
     },
     {
       "id": 93,
       "title": "S-HTTP(Secure Hypertext Transport Protocol)",
-      "description": "HTTP에 보안 요소를 추가한 확장판으로 범용으로 사용할 수 있게 설계되어 있고 기밀성, 무결성의 메시지 암호\n화를 응용 계층에서 수행하는 전자상거래 보안 프로토콜이다.\nHTTP\n기밀성\n인증기관 선택 s\n웹 브라우저 무결성 웹 서버\n전용 웹 서버,\n전용 웹 브라우저\n전자서명\n암호화 방식 협의"
+      "description": "HTTP에 보안 요소를 추가한 확장판으로 범용으로 사용할 수 있게 설계되어 있고 기밀성, 무결성의 메시지 암호화를 응용 계층에서 수행하는 전자상거래 보안 프로토콜이다."
     },
     {
       "id": 94,
       "title": "Drive by download",
-      "description": "임의의 사용자가 악의적으로 웹 사이트에 접속하는 순간 악성코드에 감염되거나 악의적인 Script가 실행되는 방\n식으로 사용자(Application)를 공격하는 해킹기법이다."
+      "description": "임의의 사용자가 악의적으로 웹 사이트에 접속하는 순간 악성코드에 감염되거나 악의적인 Script가 실행되는 방 식으로 사용자(Application)를 공격하는 해킹기법이다."
     },
     {
       "id": 95,
       "title": "모바일 멜웨어(Mobile Malware)",
-      "description": "사용자가 모르는 사이에 모바일 기기에 악성코드를 설치하여 사용자의 개인정보 및 금품 탈취 등의 행위를 하는\n신종 해킹 기법이다."
+      "description": "사용자가 모르는 사이에 모바일 기기에 악성코드를 설치하여 사용자의 개인정보 및 금품 탈취 등의 행위를 하는 신종 해킹 기법이다."
     },
     {
       "id": 96,
       "title": "스턱스넷(Stuxnet)",
-      "description": "원자력 발전소나 송유관 등 주요 산업기반 시설에 쓰이는 원격 통합 감시 제어 시스템에 침투해 차단시설을 마음대\n로 작성시키는 초정밀 악성코드이다.(독일 지멘스사의 산업 자동화 제어 시스템 공격을 목표로 제작된 악성코드)\n설\n시\n감염 기 반 발전소\n회\nSCADA System 사\n감염 도시, 가스\n악성코드 USB\n폐쇄형 운영체제\n사용자 교통"
+      "description": "원자력 발전소나 송유관 등 주요 산업기반 시설에 쓰이는 원격 통합 감시 제어 시스템에 침투해 차단시설을 마음대로 작성시키는 초정밀 악성코드이다.(독일 지멘스사의 산업 자동화 제어 시스템 공격을 목표로 제작된 악성코드)"
     },
     {
       "id": 97,
       "title": "FDS(Fraud Detection System)",
-      "description": "FDS는 일명, 이상 금융거래 방지 시스템으로 거래 내역 데이터 분석을 통해서 사용자 기반 의심 패턴을 가변적\n으로 생성하고 의심 접속을 추출 및 차단하여 실시간으로 개인정보 및 정보자산, 금융사기 거래에 대한 예방을\n수행하는 솔루션이다. 본 솔루션은 Active X를 기반으로 공인인증서를 사용하지 않고 누구나 쉽고 빠르게 인터\n넷 금융업무를 볼 수 있게 하는 시대적 배경과 핀테크와 같은 새로운 결제 수단의 등장으로 사용자의 금융자산을\n보호하기 위해서 금융권에서 구축하였다."
+      "description": "FDS는 일명, 이상 금융거래 방지 시스템으로 거래 내역 데이터 분석을 통해서 사용자 기반 의심 패턴을 가변적 으로 생성하고 의심 접속을 추출 및 차단하여 실시간으로 개인정보 및 정보자산, 금융사기 거래에 대한 예방을 수행하는 솔루션이다. 본 솔루션은 Active X를 기반으로 공인인증서를 사용하지 않고 누구나 쉽고 빠르게 인터 넷 금융업무를 볼 수 있게 하는 시대적 배경과 핀테크와 같은 새로운 결제 수단의 등장으로 사용자의 금융자산을 보호하기 위해서 금융권에서 구축하였다."
     },
     {
       "id": 98,
       "title": "BYOD(Bring Your Own Device)",
-      "description": "BYOD는 최신 IT 기술의 하나로 자신의 Device를 사용하여 시간 및 공간에 제약 없이 언제 어디서나 업무를 처\n리할 수 있는 서비스로 모바일 디바이스의 증가와 네트워크의 안전성이 확보되어 등장한 새로운 서비스이다.\n◆ BYOD와 CYOD\n구분 설명\n•\u0007Bring\u0007Your\u0007Own\u0007Device\nBYOD •\u0007최신\u0007IT\u0007기술의\u0007하나로\u0007자신의\u0007Device를\u0007사용하여\u0007시간\u0007및\u0007공간에\u0007제약\u0007없이\u0007언제\u0007어디서나\u0007업무를\u0007처리할\u0007\n수\u0007있는\u0007서비스\n•\u0007Choose\u0007Your\u0007Own\u0007Device\nCYOD\n•\u0007기업은\u0007제한된\u0007종류의\u0007장비만\u0007지원하고\u0007직원은\u0007그\u0007안에서\u0007사용할\u0007Device를\u0007선택하는\u0007방식"
+      "description": "BYOD는 최신 IT 기술의 하나로 자신의 Device를 사용하여 시간 및 공간에 제약 없이 언제 어디서나 업무를 처 리할 수 있는 서비스로 모바일 디바이스의 증가와 네트워크의 안전성이 확보되어 등장한 새로운 서비스이다."
     },
     {
       "id": 99,
       "title": "MDM(Mobile Device Management)",
-      "description": "MDM은 모바일 디바이스 관리를 위해서 안드로이드 루팅, 원격제어, 앱 배포 및 업데이트 관리, 개인정보 유출\n관리, 악성 앱 접속관리, 스마트 디바이스 분실로 인한 정보 유출 관리 등을 수행하는 모바일 보안 솔루션이다."
+      "description": "MDM은 모바일 디바이스 관리를 위해서 안드로이드 루팅, 원격제어, 앱 배포 및 업데이트 관리, 개인정보 유출 관리, 악성 앱 접속관리, 스마트 디바이스 분실로 인한 정보 유출 관리 등을 수행하는 모바일 보안 솔루션이다."
     },
     {
       "id": 100,
       "title": "VDI(Virtual Desktop Infrastrure)",
-      "description": "클라우드 기반 환경에서 데이터 센터(Data Center) 내에 가상머신을 설치하여 사용자가 가상 데스크톱(Virtual\nDesktop)에 접속하여 마치 개인 PC를 사용하는 것처럼 사용하는 솔루션이다. VDI를 통해서 개인정보 유출 및\n기업정보에 대한 외부 유출을 방지하고 모든 업무 데이터를 중앙의 서버에 저장하므로 보안 통제를 향상 시킬 수\n가 있다."
+      "description": "클라우드 기반 환경에서 데이터 센터(Data Center) 내에 가상머신을 설치하여 사용자가 가상 데스크톱(Virtual Desktop)에 접속하여 마치 개인 PC를 사용하는 것처럼 사용하는 솔루션이다. VDI를 통해서 개인정보 유출 및 기업정보에 대한 외부 유출을 방지하고 모든 업무 데이터를 중앙의 서버에 저장하므로 보안 통제를 향상 시킬 수 가 있다."
     },
     {
       "id": 101,
       "title": "EnCase",
-      "description": "EnCase는 포렌식 분석 도구로 해시함수를 통해서 원복을 백업하여 복사 이미지를 만들고 파일의 구조 및 변조\n여부, 파일 시스템 복구 등을 수행하여 디지털 증거를 수집한다. 90년 후반부터 법적 증거 능력을 인정하는 독립\n적인 솔루션이다."
+      "description": "EnCase는 포렌식 분석 도구로 해시함수를 통해서 원복을 백업하여 복사 이미지를 만들고 파일의 구조 및 변조 여부, 파일 시스템 복구 등을 수행하여 디지털 증거를 수집한다. 90년 후반부터 법적 증거 능력을 인정하는 독립 적인 솔루션이다."
     },
     {
       "id": 102,
       "title": "슬랙 공간(Slack Space)",
-      "description": "저장 매체의 논리적 구조와 물리적 구조의 차이로 인하여 발생하는 낭비되는 공간을 의미하며, 물리적으로 할당\n되었지만 논리적으로 사용할 수 있는 공간이다."
+      "description": "저장 매체의 논리적 구조와 물리적 구조의 차이로 인하여 발생하는 낭비되는 공간을 의미하며, 물리적으로 할당 되었지만 논리적으로 사용할 수 있는 공간이다."
     },
     {
       "id": 103,
       "title": "루티킷(Rootkit)",
-      "description": "시스템의 침입 사실을 감추고 차후 침입하기 위해서 백도어(Backdoor) 및 트로이목마 설치, 로그 삭제 등을 위\n해 사용되는 프로그램의 모임이다."
+      "description": "시스템의 침입 사실을 감추고 차후 침입하기 위해서 백도어(Backdoor) 및 트로이목마 설치, 로그 삭제 등을 위 해 사용되는 프로그램의 모임이다."
     },
     {
       "id": 104,
       "title": "3월 20일 MBR(Master Boot Record) 공격",
-      "description": "3월 20일 언론사 및 금융기관을 공격한 바이러스로 부팅영역의 MBR을 삭제하여 데스크톱 컴퓨터가 부팅되지\n않은 침해사례이다."
+      "description": "3월 20일 언론사 및 금융기관을 공격한 바이러스로 부팅영역의 MBR을 삭제하여 데스크톱 컴퓨터가 부팅되지 않은 침해사례이다."
     },
     {
       "id": 105,
       "title": "OpenSSL 취약점",
-      "description": "OpenSSL 1.0.1(CVE-2014-016C)에 HeartBleed 취약점이 등록되었다. 이것은 OpenSSL 암호화 시에 취약\n점으로 64Byte의 평문이 노출되는 문제점으로 OpenSSL 1.0.1g로 패치해야 한다."
+      "description": "OpenSSL 1.0.1(CVE-2014-016C)에 HeartBleed 취약점이 등록되었다. 이것은 OpenSSL 암호화 시에 취약 점으로 64Byte의 평문이 노출되는 문제점으로 OpenSSL 1.0.1g로 패치해야 한다."
     },
     {
       "id": 106,
       "title": "모바일 가상화",
-      "description": "모바일 가상화는 모바일 VDI와 모바일 하이퍼바이저로 분류되며 모바일 VDI는 개별 임직원들이 사용하는 컴퓨\n터 단말기를 모바일 디바이스로 확대하여 지원하는 것이다. 모바일 하이퍼바이저는 서버 가상화 및 PC 가상화를\n수행하는 것도 비슷한 것으로 서버에 직원들의 정보를 통합적으로 저장 관리하여 언제 어디서나 사용할 수 있는\n서비스 인프라이다."
+      "description": "모바일 가상화는 모바일 VDI와 모바일 하이퍼바이저로 분류되며 모바일 VDI는 개별 임직원들이 사용하는 컴퓨터 단말기를 모바일 디바이스로 확대하여 지원하는 것이다. 모바일 하이퍼바이저는 서버 가상화 및 PC 가상화를 수행하는 것도 비슷한 것으로 서버에 직원들의 정보를 통합적으로 저장 관리하여 언제 어디서나 사용할 수 있는 서비스 인프라이다."
     },
     {
       "id": 107,
       "title": "SIEM(Security Information Event Management)",
-      "description": "기업 내에서 발생하는 모든 보안 이벤트를 실시간으로 수집하여 위협을 탐지하는 보안 시스템으로 룰 기반, 시나\n리오 기반 등의 분석을 수행하여 알려지지 않은 공격까지도 탐지할 수 있는 보안 솔루션이다."
+      "description": "기업 내에서 발생하는 모든 보안 이벤트를 실시간으로 수집하여 위협을 탐지하는 보안 시스템으로 룰 기반, 시나 리오 기반 등의 분석을 수행하여 알려지지 않은 공격까지도 탐지할 수 있는 보안 솔루션이다."
     },
     {
       "id": 108,

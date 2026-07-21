@@ -62,6 +62,97 @@ def squeeze(text):
     return text.strip()
 
 
+def is_complete_korean_sentence(text):
+    return bool(re.search(r"(다|됨|함|음|임|있음|없음)\.(?:\([^)]*\))?$", text.strip()))
+
+
+def looks_like_term_diagram_line(line):
+    line = line.strip()
+    if not line:
+        return True
+    if len(line) <= 3 and not is_complete_korean_sentence(line):
+        return True
+    diagram_tokens = [
+        "Message",
+        "Massage",
+        "Client",
+        "Server",
+        "Backdoor",
+        "Packet",
+        "Tunneling",
+        "Change Cipher",
+        "Root CA",
+        "Plan Do Check",
+        "Service Call",
+        "HTTP Request",
+        "Web Server",
+        "Ticket",
+        "Sniffer",
+        "Sequence",
+        "Login",
+        "Password",
+        "Injection",
+        "Spoofing",
+        "DWDM",
+        "Fiber Channel",
+    ]
+    if any(token in line for token in diagram_tokens):
+        return True
+    if re.search(r"\b[A-Z][A-Za-z0-9/-]*\b.*\b[A-Z][A-Za-z0-9/-]*\b", line) and len(line) <= 80:
+        return True
+    if len(line) <= 45 and not is_complete_korean_sentence(line):
+        return True
+    return False
+
+
+def join_term_lines(lines):
+    text = ""
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        if not text:
+            text = line
+        elif text.endswith("-"):
+            text = text[:-1] + line
+        elif text.endswith("/") or text.endswith("S/"):
+            text += line
+        else:
+            text += " " + line
+    replacements = {
+        "프로토 콜": "프로토콜",
+        "메커 니즘": "메커니즘",
+        "컴퓨 터": "컴퓨터",
+        "방 법": "방법",
+        "시 스템": "시스템",
+        "네트 워크": "네트워크",
+        "암호 알고리즘": "암호알고리즘",
+        "암호 화": "암호화",
+        "파악 한다": "파악한다",
+        "있 으며": "있으며",
+        "사이에 서": "사이에서",
+        "마음대 로": "마음대로",
+        "S/ MIME": "S/MIME",
+        "Mu- tual": "Mutual",
+        "Ac- cess": "Access",
+    }
+    for before, after in replacements.items():
+        text = text.replace(before, after)
+    text = re.sub(r"\s+([,.])", r"\1", text)
+    return squeeze(text)
+
+
+def clean_term_description(raw_description):
+    lines = [line.strip() for line in raw_description.splitlines() if line.strip()]
+    kept = []
+    for line in lines:
+        current = join_term_lines(kept)
+        if kept and is_complete_korean_sentence(current) and looks_like_term_diagram_line(line):
+            break
+        kept.append(line)
+    return join_term_lines(kept)
+
+
 def parse_terms(raw):
     text = clean_common(raw)
     text = re.sub(r"^핵심 용어 108선\s*", "", text)
@@ -72,7 +163,7 @@ def parse_terms(raw):
         title = match.group(2).strip()
         start = match.end()
         end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
-        description = squeeze(text[start:end])
+        description = clean_term_description(text[start:end])
         if number <= 108:
             terms.append({"id": number, "title": title, "description": description})
     return terms

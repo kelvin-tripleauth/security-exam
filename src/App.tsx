@@ -30,6 +30,57 @@ const normalize = (value: string) =>
     .replace(/[()\[\]{}.,:;'"“”‘’·\s-]/g, "")
     .trim();
 
+const termHighlightSeeds = [
+  "기밀성",
+  "무결성",
+  "가용성",
+  "인증",
+  "암호화",
+  "복호화",
+  "대칭키",
+  "비대칭키",
+  "전자서명",
+  "해시함수",
+  "접근 권한",
+  "고가용성",
+  "백도어",
+  "트랩도어",
+  "프로토콜",
+  "전자상거래",
+  "웹 브라우저",
+  "웹 서버",
+  "침입",
+  "탐지",
+  "개인정보",
+  "위험",
+  "취약점",
+  "패스워드",
+  "악성코드",
+  "루트킷",
+];
+
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const getTermKeywords = (term: Term) => {
+  const text = `${term.title} ${term.description}`;
+  const titleBase = term.title.replace(/\([^)]*\)/g, "").trim();
+  const parenthetical = [...term.title.matchAll(/\(([^)]+)\)/g)].map((match) => match[1].trim());
+  const acronyms = text.match(/\b(?:[A-Z0-9]{2,}(?:[-/][A-Z0-9]+)*|[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b/g) ?? [];
+  return [...new Set([titleBase, ...parenthetical, ...acronyms, ...termHighlightSeeds])]
+    .map((keyword) => keyword.trim())
+    .filter((keyword) => keyword.length >= 2 && text.includes(keyword))
+    .sort((a, b) => b.length - a.length);
+};
+
+const renderHighlightedText = (text: string, keywords: string[]) => {
+  if (keywords.length === 0) return text;
+  const keywordPattern = new RegExp(`(${keywords.map(escapeRegExp).join("|")})`, "gi");
+  return text.split(keywordPattern).map((part, index) => {
+    const isKeyword = keywords.some((keyword) => keyword.toLowerCase() === part.toLowerCase());
+    return isKeyword ? <strong key={`${part}-${index}`}>{part}</strong> : part;
+  });
+};
+
 const isPracticalCorrect = (input: string, answer: string) => {
   const normalizedInput = normalize(input);
   const normalizedAnswer = normalize(answer);
@@ -231,6 +282,7 @@ function TermsReader({
   const selectedIndex = terms.findIndex((term) => term.id === selectedTerm.id);
   const hasTerms = terms.length > 0;
   const paragraphs = selectedTerm.description.split(/\n+/).filter(Boolean);
+  const keywords = getTermKeywords(selectedTerm);
 
   const moveSelection = (direction: -1 | 1) => {
     if (!hasTerms) return;
@@ -274,7 +326,7 @@ function TermsReader({
         <h3>{selectedTerm.title}</h3>
         <div className="term-reader-body">
           {paragraphs.map((paragraph, index) => (
-            <p key={`${selectedTerm.id}-${index}`}>{paragraph}</p>
+            <p key={`${selectedTerm.id}-${index}`}>{renderHighlightedText(paragraph, keywords)}</p>
           ))}
         </div>
         <div className="term-reader-actions">
